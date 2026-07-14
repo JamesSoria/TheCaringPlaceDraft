@@ -1,0 +1,35 @@
+---
+layout: layout.njk
+pagination:
+  data: stories
+  size: 1
+  alias: story
+permalink: "/survivor-stories/{{ story.slug }}/"
+eleventyComputed:
+  title: "{{ story.name }}'s Story"
+  description: "{{ story.summary }}"
+---
+<div class="pagehero" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260707_222126_48a897bd-5c85-47e7-9386-ffa53c002807.png')">
+  <div class="shade"></div>
+  <div class="wrap">
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/survivor-stories/">Survivor Stories</a> / {{ story.name }}'s Story</p>
+    <p class="eyebrow">Survivor Stories</p>
+    <h1>{{ story.name }}'s Story</h1>
+    <p>{{ story.byline }}</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="prose">
+      <p>{{ story.summary }}</p>
+      <div class="callout">
+        <p>This story is shared with the survivor's permission, in their own words where possible. If something here feels familiar, you don't have to carry it alone — support is free, confidential, and available right now.</p>
+      </div>
+      <div class="hero-ctas" style="margin-top:32px">
+        <a class="btn btn-clay" href="/get-help/">Get help now</a>
+        <a class="btn btn-ghost" href="/survivor-stories/">More survivor stories</a>
+      </div>
+    </div>
+  </div>
+</section>

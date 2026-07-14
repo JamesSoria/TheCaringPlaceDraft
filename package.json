@@ -1,0 +1,25 @@
+{
+  "name": "thecaringplacedraft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesSoria/TheCaringPlaceDraft.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesSoria/TheCaringPlaceDraft/issues"
+  },
+  "homepage": "https://github.com/JamesSoria/TheCaringPlaceDraft#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

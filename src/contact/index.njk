@@ -1,0 +1,49 @@
+---
+layout: layout.njk
+title: Contact
+description: "Contact The Caring Place — 24-hour crisis line, administrative office, and a secure message form for non-emergency questions."
+---
+<div class="pagehero" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260707_222128_6a0140fd-6355-4075-a0a8-47129dc7943e.png')">
+  <div class="shade"></div>
+  <div class="wrap">
+    <p class="breadcrumb"><a href="/">Home</a> / Contact</p>
+    <p class="eyebrow">Contact</p>
+    <h1>How can we help you today?</h1>
+    <p>If this is an emergency, please call <a href="tel:911" style="color:#fff;text-decoration:underline">911</a>. For crisis support, call our 24-hour line below.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Reach Us</p>
+      <h2>Crisis &amp; administrative contacts</h2>
+      <p class="phone-cta">24-Hour Crisis Line<br><a href="tel:219-464-2128">219-464-2128</a></p>
+      <p class="phone-cta" style="font-size:19px">Toll-free: <a href="tel:1-800-933-0466">1-800-933-0466</a></p>
+      <p style="margin-top:24px">Administrative office (8am–4pm):<br><strong>219-464-0840</strong></p>
+      <p style="margin-top:16px">Advocacy Center:<br>607 Bullseye Lake Road<br>Valparaiso, IN 46383</p>
+      <p style="margin-top:20px;font-size:15.5px;background:var(--sand);border-radius:6px;padding:12px 14px">Please don't email for immediate needs — call the crisis line above for anything urgent.</p>
+    </div>
+    <form class="gethelp" method="POST" action="/thank-you/" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="position:absolute;left:-9999px"><label>Leave this field blank<input name="bot-field"></label></p>
+      <h3 style="font-size:22px">Send us a message</h3>
+      <p class="form-safety">For non-emergency questions only.</p>
+      <div><label for="c-name">Name<input id="c-name" name="name" type="text" required></label></div>
+      <div><label for="c-email">Email<input id="c-email" name="email" type="email" required></label></div>
+      <div><label for="c-phone">Phone<input id="c-phone" name="phone" type="tel"></label></div>
+      <div><label for="c-subject">Subject<input id="c-subject" name="subject" type="text"></label></div>
+      <div><label for="c-message">Message<textarea id="c-message" name="message"></textarea></label></div>
+      <button class="btn btn-teal" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<section style="text-align:center;padding-top:0">
+  <div class="wrap">
+    <div class="hero-ctas" style="justify-content:center">
+      <a class="btn btn-clay" href="/get-help/">I need help now</a>
+      <a class="btn btn-teal" href="/get-involved/">Donate or volunteer</a>
+    </div>
+  </div>
+</section>

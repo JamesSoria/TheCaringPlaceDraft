@@ -1,0 +1,87 @@
+---
+layout: layout.njk
+title: News & Events
+description: "Signature fundraising events and the latest news from The Caring Place — Art with Heart, Cookie Walk, Black Tie Bingo, Tea & Tours, and more."
+---
+<div class="pagehero" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260707_222128_6a0140fd-6355-4075-a0a8-47129dc7943e.png')">
+  <div class="shade"></div>
+  <div class="wrap">
+    <p class="breadcrumb"><a href="/">Home</a> / News &amp; Events</p>
+    <p class="eyebrow">Events</p>
+    <h1>Join us this year</h1>
+    <p>Our fundraising events fund shelter services, advocacy, and community education year-round.</p>
+  </div>
+</div>
+
+<section class="events-band">
+  <div class="wrap">
+    <p class="eyebrow">Signature Events</p>
+    <h2>Save the date</h2>
+    <div class="ev-grid">
+      {% for event in events %}
+      <div class="ev">
+        <a class="thumb" href="/news-events/{{ event.slug }}/" aria-label="View {{ event.title }}"><img src="{{ event.image }}" alt="{{ event.title }}" loading="lazy"></a>
+        <div class="body"><h3>{{ event.title }}</h3><p>{{ event.blurb }}</p><a href="/news-events/{{ event.slug }}/">Learn more →</a></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Latest News</p>
+    <h2>From The Caring Place</h2>
+    <div class="card-grid" style="margin-top:40px">
+      <div class="card">
+        <span class="role">March 20, 2025</span>
+        <h3>Stand with Survivors: Your Support Matters Now More Than Ever</h3>
+        <p>An update on our 25x12 campaign and how the community can help.</p>
+      </div>
+      <div class="card">
+        <span class="role">March 19, 2025</span>
+        <h3>See How Art Supports Survivors of Domestic Violence</h3>
+        <p>A look at how creative expression plays a role in survivor recovery.</p>
+      </div>
+      <div class="card">
+        <span class="role">February 12, 2025</span>
+        <h3>Come Dine With Us At Don Quijote</h3>
+        <p>A community dining fundraiser supporting our shelter and services.</p>
+      </div>
+      <div class="card">
+        <span class="role">November 1, 2024</span>
+        <h3>Fall 2024 Newsletter</h3>
+        <p>Catch up on our latest newsletter and program updates.</p>
+      </div>
+      <div class="card">
+        <span class="role">October 1, 2024</span>
+        <h3>Woman to Woman Feature: Jessica Luth</h3>
+        <p>Our President &amp; CEO is spotlighted discussing our mission and work.</p>
+      </div>
+      <div class="card">
+        <span class="role">September 9, 2024</span>
+        <h3>Regional Finalist for the Chick-fil-A True Inspiration Award</h3>
+        <p>The Caring Place named a 2025 regional finalist.</p>
+      </div>
+    </div>
+    <p style="margin-top:8px;font-size:15px;color:rgb(46 42 49 / .6)">Note for the client: full articles can be added as individual pages using the same template as our signature events — send over the copy and photos whenever you're ready.</p>
+  </div>
+</section>
+
+<section class="newsletter" style="padding-top:0">
+  <div class="wrap">
+    <div class="nl-inner">
+      <a class="nl-cover" href="https://irp.cdn-website.com/a9ee4825/files/uploaded/DIGITAL+WINTER+2026+Newsletter.pdf" rel="noopener" aria-label="Download the Winter 2026 newsletter (PDF)">
+        <span class="nlc-head">The Caring Place</span>
+        <span class="nlc-title">Winter<br>2026</span>
+        <span class="nlc-foot">Newsletter · PDF</span>
+      </a>
+      <div class="nl-copy">
+        <p class="eyebrow">Newsletter</p>
+        <h2 style="font-size:clamp(21px,2.4vw,27px)">It truly takes a village.</h2>
+        <p style="margin-top:8px;font-size:17px">Download our latest newsletter to see how you can support survivors, stay connected to our work, and get involved in upcoming events.</p>
+      </div>
+      <a class="btn btn-teal" href="https://irp.cdn-website.com/a9ee4825/files/uploaded/DIGITAL+WINTER+2026+Newsletter.pdf" rel="noopener">Download the newsletter</a>
+    </div>
+  </div>
+</section>
