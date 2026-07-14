@@ -6,7 +6,7 @@ description: "Signature fundraising events and the latest news from The Caring P
 <div class="pagehero" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260707_222128_6a0140fd-6355-4075-a0a8-47129dc7943e.png')">
   <div class="shade"></div>
   <div class="wrap">
-    <p class="breadcrumb"><a href="/">Home</a> / News &amp; Events</p>
+    <p class="breadcrumb"><a href="{{ '/' | url }}">Home</a> / News &amp; Events</p>
     <p class="eyebrow">Events</p>
     <h1>Join us this year</h1>
     <p>Our fundraising events fund shelter services, advocacy, and community education year-round.</p>
@@ -20,8 +20,8 @@ description: "Signature fundraising events and the latest news from The Caring P
     <div class="ev-grid">
       {% for event in events %}
       <div class="ev">
-        <a class="thumb" href="/news-events/{{ event.slug }}/" aria-label="View {{ event.title }}"><img src="{{ event.image }}" alt="{{ event.title }}" loading="lazy"></a>
-        <div class="body"><h3>{{ event.title }}</h3><p>{{ event.blurb }}</p><a href="/news-events/{{ event.slug }}/">Learn more →</a></div>
+        <a class="thumb" href="{{ ('/news-events/' ~ event.slug ~ '/') | url }}" aria-label="View {{ event.title }}"><img src="{{ event.image }}" alt="{{ event.title }}" loading="lazy"></a>
+        <div class="body"><h3>{{ event.title }}</h3><p>{{ event.blurb }}</p><a href="{{ ('/news-events/' ~ event.slug ~ '/') | url }}">Learn more →</a></div>
       </div>
       {% endfor %}
     </div>

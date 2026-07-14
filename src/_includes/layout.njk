@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="{{ '/css/style.css' | url }}">
 </head>
 <body>
 
@@ -22,40 +22,46 @@
   </div>
 </div>
 
+{% if site.isPagesPreview %}
+<div style="background:#B8860B;color:#fff;text-align:center;font:700 14px var(--sans);padding:8px 16px">
+  Design preview only — forms on this version do not submit. The live site is hosted separately.
+</div>
+{% endif %}
+
 <button class="escape" id="escapeBtn" aria-label="Quick escape — leave this site immediately">✕ Quick Escape <kbd>Esc</kbd></button>
 
 <header class="site">
   <div class="wrap hrow">
-    <a class="logo" href="/" aria-label="The Caring Place — home"><img src="https://lirp.cdn-website.com/a9ee4825/dms3rep/multi/opt/2025+TCP+Logo-199w.png" alt="The Caring Place — A Center for Change" style="height:60px;width:auto"></a>
+    <a class="logo" href="{{ '/' | url }}" aria-label="The Caring Place — home"><img src="https://lirp.cdn-website.com/a9ee4825/dms3rep/multi/opt/2025+TCP+Logo-199w.png" alt="The Caring Place — A Center for Change" style="height:60px;width:auto"></a>
     <nav class="main" aria-label="Main">
       <ul id="mainNav">
-        <li><a href="/get-help/">Get Help Now</a>
+        <li><a href="{{ '/get-help/' | url }}">Get Help Now</a>
           <ul>
-            <li><a href="/get-help/is-this-domestic-violence/">Is This Domestic Violence?</a></li>
-            <li><a href="/get-help/how-do-i-leave/">How Do I Leave an Abusive Relationship?</a></li>
-            <li><a href="/get-help/what-happens-in-the-shelter/">What Happens in the Shelter?</a></li>
-            <li><a href="/get-help/what-does-the-shelter-look-like/">What Does the Shelter Look Like?</a></li>
+            <li><a href="{{ '/get-help/is-this-domestic-violence/' | url }}">Is This Domestic Violence?</a></li>
+            <li><a href="{{ '/get-help/how-do-i-leave/' | url }}">How Do I Leave an Abusive Relationship?</a></li>
+            <li><a href="{{ '/get-help/what-happens-in-the-shelter/' | url }}">What Happens in the Shelter?</a></li>
+            <li><a href="{{ '/get-help/what-does-the-shelter-look-like/' | url }}">What Does the Shelter Look Like?</a></li>
           </ul>
         </li>
-        <li><a href="/services/">Our Services</a></li>
-        <li><a href="/about/">About</a>
+        <li><a href="{{ '/services/' | url }}">Our Services</a></li>
+        <li><a href="{{ '/about/' | url }}">About</a>
           <ul>
-            <li><a href="/about/">About The Caring Place</a></li>
-            <li><a href="/about/leadership-board/">Leadership &amp; Board</a></li>
-            <li><a href="/survivor-stories/">Survivor Stories</a></li>
+            <li><a href="{{ '/about/' | url }}">About The Caring Place</a></li>
+            <li><a href="{{ '/about/leadership-board/' | url }}">Leadership &amp; Board</a></li>
+            <li><a href="{{ '/survivor-stories/' | url }}">Survivor Stories</a></li>
           </ul>
         </li>
-        <li><a href="/news-events/">News &amp; Events</a></li>
-        <li><a href="/get-involved/">Get Involved</a>
+        <li><a href="{{ '/news-events/' | url }}">News &amp; Events</a></li>
+        <li><a href="{{ '/get-involved/' | url }}">Get Involved</a>
           <ul>
-            <li><a href="/get-involved/#donate">Donate</a></li>
-            <li><a href="/get-involved/#volunteer">Volunteer</a></li>
-            <li><a href="/get-involved/#in-kind">In-Kind Donations</a></li>
+            <li><a href="{{ '/get-involved/#donate' | url }}">Donate</a></li>
+            <li><a href="{{ '/get-involved/#volunteer' | url }}">Volunteer</a></li>
+            <li><a href="{{ '/get-involved/#in-kind' | url }}">In-Kind Donations</a></li>
           </ul>
         </li>
-        <li><a href="/corporate-sponsorships/">Corporate Sponsorships</a></li>
-        <li><a href="/careers/">Careers</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="{{ '/corporate-sponsorships/' | url }}">Corporate Sponsorships</a></li>
+        <li><a href="{{ '/careers/' | url }}">Careers</a></li>
+        <li><a href="{{ '/contact/' | url }}">Contact</a></li>
       </ul>
     </nav>
     <div class="hactions">
@@ -86,16 +92,16 @@
       <div>
         <h3>Useful links</h3>
         <p style="margin-top:10px">
-          <a href="/get-help/">Get Help Now</a><br>
-          <a href="/services/">Our Services</a><br>
-          <a href="/about/">About</a><br>
-          <a href="/news-events/">News &amp; Events</a><br>
-          <a href="/get-involved/">Donate / Volunteer</a><br>
-          <a href="/survivor-stories/">Survivor Stories</a><br>
-          <a href="/corporate-sponsorships/">Corporate Sponsorships</a><br>
-          <a href="/careers/">Careers</a><br>
-          <a href="/contact/">Contact</a><br>
-          <a href="/website-accessibility-statement/">Website Accessibility Statement</a>
+          <a href="{{ '/get-help/' | url }}">Get Help Now</a><br>
+          <a href="{{ '/services/' | url }}">Our Services</a><br>
+          <a href="{{ '/about/' | url }}">About</a><br>
+          <a href="{{ '/news-events/' | url }}">News &amp; Events</a><br>
+          <a href="{{ '/get-involved/' | url }}">Donate / Volunteer</a><br>
+          <a href="{{ '/survivor-stories/' | url }}">Survivor Stories</a><br>
+          <a href="{{ '/corporate-sponsorships/' | url }}">Corporate Sponsorships</a><br>
+          <a href="{{ '/careers/' | url }}">Careers</a><br>
+          <a href="{{ '/contact/' | url }}">Contact</a><br>
+          <a href="{{ '/website-accessibility-statement/' | url }}">Website Accessibility Statement</a>
         </p>
       </div>
     </div>

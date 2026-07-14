@@ -6,7 +6,7 @@ description: "Donate, volunteer, or give in-kind to support survivors of domesti
 <div class="pagehero" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260707_222130_dfd86fcf-11d5-4366-9d60-da5ebbf200c8.png')">
   <div class="shade"></div>
   <div class="wrap">
-    <p class="breadcrumb"><a href="/">Home</a> / Get Involved</p>
+    <p class="breadcrumb"><a href="{{ '/' | url }}">Home</a> / Get Involved</p>
     <p class="eyebrow">How You Can Help</p>
     <h1>Your support makes healing possible</h1>
     <p>It costs $2,300 a month to feed everyone in shelter, and at least $90,000 a month to run our facilities, programming and outreach.</p>
@@ -43,7 +43,7 @@ description: "Donate, volunteer, or give in-kind to support survivors of domesti
       <p>Volunteer opportunities change as new needs arise — from shelter support to events and administrative help. Tell us a bit about yourself and we'll follow up about current openings.</p>
       <p class="phone-cta" style="font-size:19px">Questions? Call 219-464-0840<br><span style="font-size:15.5px;font-weight:400">Administrative office, 8am–4pm</span></p>
     </div>
-    <form class="gethelp" method="POST" action="/thank-you/" name="volunteer-inquiry" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="gethelp" method="POST" action="{{ '/thank-you/' | url }}" name="volunteer-inquiry" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="volunteer-inquiry">
       <p style="position:absolute;left:-9999px"><label>Leave this field blank<input name="bot-field"></label></p>
       <h3 style="font-size:22px">Volunteer inquiry</h3>
@@ -74,7 +74,7 @@ description: "Donate, volunteer, or give in-kind to support survivors of domesti
   <div class="wrap">
     <div class="outreach" style="border-top:none;padding-top:0;margin-top:0">
       <p><strong>Running a business or community group?</strong> Partner with us this holiday season as a Holiday Helper.</p>
-      <div class="hero-ctas"><a class="btn btn-ghost" href="/holiday-helper-campaign/">Learn about the Holiday Helper Campaign</a></div>
+      <div class="hero-ctas"><a class="btn btn-ghost" href="{{ '/holiday-helper-campaign/' | url }}">Learn about the Holiday Helper Campaign</a></div>
     </div>
   </div>
 </section>

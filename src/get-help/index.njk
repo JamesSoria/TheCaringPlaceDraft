@@ -6,7 +6,7 @@ description: "Free, confidential help for anyone experiencing domestic violence 
 <div class="pagehero" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260714_221807_ef91b305-82e8-4ef9-a5e3-f07cab7110fa.png')">
   <div class="shade"></div>
   <div class="wrap">
-    <p class="breadcrumb"><a href="/">Home</a> / Get Help Now</p>
+    <p class="breadcrumb"><a href="{{ '/' | url }}">Home</a> / Get Help Now</p>
     <p class="eyebrow">If You Need Help</p>
     <h1>You are not alone. We believe you.</h1>
     <p>Free, confidential support is available 24 hours a day — for you, your children, and anyone in your life affected by domestic violence or sexual assault.</p>
@@ -27,7 +27,7 @@ description: "Free, confidential help for anyone experiencing domestic violence 
       <p>Safe shelter and services are <strong>free and confidential</strong>. If this is an emergency, call <a href="tel:911">911</a>.</p>
       <p class="phone-cta">219-464-2128<br><span style="font-size:16px;font-weight:600">Toll-free: <a href="tel:1-800-933-0466">1-800-933-0466</a></span></p>
     </div>
-    <form class="gethelp" method="POST" action="/thank-you/" name="get-help" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="gethelp" method="POST" action="{{ '/thank-you/' | url }}" name="get-help" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="get-help">
       <p style="position:absolute;left:-9999px"><label>Leave this field blank<input name="bot-field"></label></p>
       <h3 style="font-size:22px">Or send a secure message</h3>
@@ -49,22 +49,22 @@ description: "Free, confidential help for anyone experiencing domestic violence 
     <p style="margin-top:16px">Every situation is different. These guides can help you understand what abuse looks like, how to plan a safe exit, and what to expect if you come to our shelter.</p>
     <div class="card-grid">
       <div class="card">
-        <h3><a href="/get-help/is-this-domestic-violence/" style="text-decoration:none">Is This Domestic Violence?</a></h3>
+        <h3><a href="{{ '/get-help/is-this-domestic-violence/' | url }}" style="text-decoration:none">Is This Domestic Violence?</a></h3>
         <p>What abuse can look like — physical, sexual, emotional, and economic — and why it's never your fault.</p>
       </div>
       <div class="card">
-        <h3><a href="/get-help/how-do-i-leave/" style="text-decoration:none">How Do I Leave an Abusive Relationship?</a></h3>
+        <h3><a href="{{ '/get-help/how-do-i-leave/' | url }}" style="text-decoration:none">How Do I Leave an Abusive Relationship?</a></h3>
         <p>Safety planning guidance for the period before, during, and after leaving.</p>
       </div>
       <div class="card">
-        <h3><a href="/get-help/what-happens-in-the-shelter/" style="text-decoration:none">What Happens in the Shelter?</a></h3>
+        <h3><a href="{{ '/get-help/what-happens-in-the-shelter/' | url }}" style="text-decoration:none">What Happens in the Shelter?</a></h3>
         <p>The advocacy, groups, and support services available once you arrive.</p>
       </div>
       <div class="card">
-        <h3><a href="/get-help/what-does-the-shelter-look-like/" style="text-decoration:none">What Does the Shelter Look Like?</a></h3>
+        <h3><a href="{{ '/get-help/what-does-the-shelter-look-like/' | url }}" style="text-decoration:none">What Does the Shelter Look Like?</a></h3>
         <p>A look at our 12-bedroom, ADA-accessible facility and its shared spaces.</p>
       </div>
     </div>
-    <p style="margin-top:36px;font-size:15.5px">Looking for other assistance? Search <a href="https://portercounty.findhelp.com" rel="noopener">findhelp for Porter County</a> or visit our <a href="/services/">full list of services</a>.</p>
+    <p style="margin-top:36px;font-size:15.5px">Looking for other assistance? Search <a href="https://portercounty.findhelp.com" rel="noopener">findhelp for Porter County</a> or visit our <a href="{{ '/services/' | url }}">full list of services</a>.</p>
   </div>
 </section>

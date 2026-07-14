@@ -12,7 +12,7 @@ eleventyComputed:
 <div class="pagehero" style="background-image:url('{{ event.image }}')">
   <div class="shade"></div>
   <div class="wrap">
-    <p class="breadcrumb"><a href="/">Home</a> / <a href="/news-events/">News &amp; Events</a> / {{ event.title }}</p>
+    <p class="breadcrumb"><a href="{{ '/' | url }}">Home</a> / <a href="{{ '/news-events/' | url }}">News &amp; Events</a> / {{ event.title }}</p>
     <p class="eyebrow">{{ event.date }}</p>
     <h1>{{ event.title }}</h1>
     <p>{{ event.blurb }}</p>
@@ -25,7 +25,7 @@ eleventyComputed:
       <p>{{ event.body }}</p>
       <div class="hero-ctas" style="margin-top:32px">
         <a class="btn btn-clay" href="{{ event.ticketUrl }}" rel="noopener">{{ event.ticketLabel }}</a>
-        <a class="btn btn-ghost" href="/news-events/">Back to News &amp; Events</a>
+        <a class="btn btn-ghost" href="{{ '/news-events/' | url }}">Back to News &amp; Events</a>
       </div>
     </div>
   </div>

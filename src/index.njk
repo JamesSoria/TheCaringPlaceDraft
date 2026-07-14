@@ -25,9 +25,9 @@ description: "Free, confidential help for people experiencing domestic violence 
       <p style="margin-top:16px">We believe every person deserves to live free from fear. Since our founding, The Caring Place has provided shelter, advocacy, and support for survivors of domestic violence and sexual assault — and their children — across Lake, Porter and Starke counties.</p>
       <p style="margin-top:14px;font-weight:700;font-family:var(--serif);color:var(--plum);font-size:19px">We believe you. It is not your fault.</p>
       <div class="hero-ctas" style="margin-top:26px">
-        <a class="btn btn-ghost" href="/about/">Our history &amp; team</a>
-        <a class="btn btn-ghost" href="/news-events/">News &amp; Events</a>
-        <a class="btn btn-ghost" href="/careers/">Careers</a>
+        <a class="btn btn-ghost" href="{{ '/about/' | url }}">Our history &amp; team</a>
+        <a class="btn btn-ghost" href="{{ '/news-events/' | url }}">News &amp; Events</a>
+        <a class="btn btn-ghost" href="{{ '/careers/' | url }}">Careers</a>
       </div>
     </div>
   </div>
@@ -46,9 +46,9 @@ description: "Free, confidential help for people experiencing domestic violence 
       </ul>
       <p>Safe shelter and services are <strong>free and confidential</strong>.</p>
       <p class="phone-cta">Call our 24-Hour Crisis Line:<br><a href="tel:219-464-2128">219-464-2128</a></p>
-      <p style="margin-top:22px"><a href="/get-help/" style="color:var(--teal-light);font-weight:700">Not sure where to start? Visit our Get Help Now guide →</a></p>
+      <p style="margin-top:22px"><a href="{{ '/get-help/' | url }}" style="color:var(--teal-light);font-weight:700">Not sure where to start? Visit our Get Help Now guide →</a></p>
     </div>
-    <form class="gethelp" method="POST" action="/thank-you/" name="get-help" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="gethelp" method="POST" action="{{ '/thank-you/' | url }}" name="get-help" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="get-help">
       <p style="position:absolute;left:-9999px"><label>Leave this field blank<input name="bot-field"></label></p>
       <h3 style="font-size:22px">Or send a secure message</h3>
@@ -83,7 +83,7 @@ description: "Free, confidential help for people experiencing domestic violence 
     </div>
     <div class="outreach">
       <p><strong>Bring our team to your school, church, or workplace.</strong> We speak on healthy relationships, recognizing abuse, and supporting survivors.</p>
-      <div class="hero-ctas"><a class="btn btn-ghost" href="/services/">View all our services</a></div>
+      <div class="hero-ctas"><a class="btn btn-ghost" href="{{ '/services/' | url }}">View all our services</a></div>
     </div>
   </div>
 </section>
@@ -108,8 +108,8 @@ description: "Free, confidential help for people experiencing domestic violence 
       </ul>
       <div class="hero-ctas">
         <a class="btn btn-clay" href="https://fundraise.givesmart.com/form/lrINrA?vid=12g272" rel="noopener">Donate</a>
-        <a class="btn btn-teal" href="/get-involved/#volunteer">Volunteer</a>
-        <a class="btn btn-ghost" href="/get-involved/">See all ways to help</a>
+        <a class="btn btn-teal" href="{{ '/get-involved/#volunteer' | url }}">Volunteer</a>
+        <a class="btn btn-ghost" href="{{ '/get-involved/' | url }}">See all ways to help</a>
       </div>
     </div>
   </div>
@@ -120,18 +120,18 @@ description: "Free, confidential help for people experiencing domestic violence 
     <p class="eyebrow">Events</p>
     <h2>Join us this year</h2>
     <div class="ev-grid">
-      <div class="ev"><a class="thumb" href="/news-events/" aria-label="View the Art with Heart event"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260708_015551_0943ebca-47ba-4075-8272-2dfea7220c9c_min.webp" alt="Art with Heart — art benefit preview" loading="lazy"></a>
+      <div class="ev"><a class="thumb" href="{{ '/news-events/' | url }}" aria-label="View the Art with Heart event"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260708_015551_0943ebca-47ba-4075-8272-2dfea7220c9c_min.webp" alt="Art with Heart — art benefit preview" loading="lazy"></a>
         <div class="body"><h3>Art with Heart</h3><p>Our signature art benefit supporting survivors.</p><a href="https://AWH26.givesmart.com" rel="noopener">Get tickets →</a></div></div>
-      <div class="ev"><a class="thumb" href="/news-events/" aria-label="View the Cookie Walk event"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260708_015552_910feb0d-3aa8-49c0-9eda-761d5cd312c0_min.webp" alt="Cookie Walk — holiday cookie tables" loading="lazy"></a>
-        <div class="body"><h3>Cookie Walk</h3><p>A sweet holiday tradition that funds shelter services.</p><a href="/news-events/">View event details →</a></div></div>
-      <div class="ev"><a class="thumb" href="/news-events/" aria-label="View the Black Tie Bingo event"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260708_015554_d1dbd3ba-ecf3-49b1-89ad-ee097521f727_min.webp" alt="Black Tie Bingo — elegant evening tables" loading="lazy"></a>
-        <div class="body"><h3>Black Tie Bingo</h3><p>A night out with a purpose.</p><a href="/news-events/">View event details →</a></div></div>
-      <div class="ev"><a class="thumb" href="/news-events/" aria-label="Sign up for the next Tea and Tour"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260708_015556_3bb55867-b13e-4494-b1ee-d5fba30421b0_min.webp" alt="Tea and Tours — afternoon tea setting" loading="lazy"></a>
-        <div class="body"><h3>Tea &amp; Tours</h3><p>Interested in the next Tea &amp; Tour? Save your seat.</p><a href="/news-events/">Sign up →</a></div></div>
+      <div class="ev"><a class="thumb" href="{{ '/news-events/' | url }}" aria-label="View the Cookie Walk event"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260708_015552_910feb0d-3aa8-49c0-9eda-761d5cd312c0_min.webp" alt="Cookie Walk — holiday cookie tables" loading="lazy"></a>
+        <div class="body"><h3>Cookie Walk</h3><p>A sweet holiday tradition that funds shelter services.</p><a href="{{ '/news-events/' | url }}">View event details →</a></div></div>
+      <div class="ev"><a class="thumb" href="{{ '/news-events/' | url }}" aria-label="View the Black Tie Bingo event"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260708_015554_d1dbd3ba-ecf3-49b1-89ad-ee097521f727_min.webp" alt="Black Tie Bingo — elegant evening tables" loading="lazy"></a>
+        <div class="body"><h3>Black Tie Bingo</h3><p>A night out with a purpose.</p><a href="{{ '/news-events/' | url }}">View event details →</a></div></div>
+      <div class="ev"><a class="thumb" href="{{ '/news-events/' | url }}" aria-label="Sign up for the next Tea and Tour"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FbWkBIBY3yHx2BErgPM2PJzng4/hf_20260708_015556_3bb55867-b13e-4494-b1ee-d5fba30421b0_min.webp" alt="Tea and Tours — afternoon tea setting" loading="lazy"></a>
+        <div class="body"><h3>Tea &amp; Tours</h3><p>Interested in the next Tea &amp; Tour? Save your seat.</p><a href="{{ '/news-events/' | url }}">Sign up →</a></div></div>
     </div>
     <div class="outreach">
       <p>See the full calendar, past event recaps, and our latest news.</p>
-      <div class="hero-ctas"><a class="btn btn-ghost" href="/news-events/">View all news &amp; events</a></div>
+      <div class="hero-ctas"><a class="btn btn-ghost" href="{{ '/news-events/' | url }}">View all news &amp; events</a></div>
     </div>
   </div>
 </section>
@@ -179,8 +179,8 @@ description: "Free, confidential help for people experiencing domestic violence 
     <h2>How can we help you today?</h2>
     <div class="hero-ctas" style="justify-content:center;margin-top:30px">
       <a class="btn btn-clay" href="#gethelp">I need help now</a>
-      <a class="btn btn-teal" href="/get-involved/">Donate or volunteer</a>
-      <a class="btn btn-ghost" href="/contact/">I have a question</a>
+      <a class="btn btn-teal" href="{{ '/get-involved/' | url }}">Donate or volunteer</a>
+      <a class="btn btn-ghost" href="{{ '/contact/' | url }}">I have a question</a>
     </div>
   </div>
 </section>
