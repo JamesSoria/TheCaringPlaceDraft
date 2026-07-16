@@ -126,6 +126,16 @@ nav.main>ul.open li>ul{display:block;position:static;border:none;box-shadow:none
 .phone-cta a{color:var(--teal);text-decoration:none;white-space:nowrap}
 .phone-cta a:hover{text-decoration:underline}
 
+/* ===== TRIBUTE — dignified gold spotlight for sensitive/memorial content ===== */
+.tribute{background:linear-gradient(180deg,var(--gold-light) 0%,var(--white) 70%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tribute .ribbon{display:inline-block;background:var(--gold);color:#3A2E12;font:700 13px var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:3px;margin-bottom:14px}
+.tribute h2{color:var(--plum)}
+.tribute .checklist li{border-bottom-color:rgb(179 144 63 / .3)}
+.tribute .btn-clay,.tribute .btn-teal{background:var(--gold);color:#3A2E12}
+.tribute .btn-clay:hover,.tribute .btn-teal:hover{background:var(--gold-deep);color:#fff}
+.svc.spotlight .ic svg{stroke:var(--gold-deep)}
+.svc.spotlight h3{color:var(--gold-deep)}
+
 /* ===== GET HELP — the page's dark anchor ===== */
 .helpband{background:var(--plum-band)}
 .helpband .eyebrow{color:var(--teal-light)}
