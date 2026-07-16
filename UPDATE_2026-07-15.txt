@@ -1,0 +1,20 @@
+The Caring Place — Session Update (2026-07-15)
+
+Summary of changes made during this session:
+
+1. Added a gold accent color, scaled up typography, and redesigned the
+   card/photo framing across the site (layout.njk, style.css).
+2. Removed the stale root index.html mockup that was no longer needed
+   now that the site is built as a multi-page Eleventy static site.
+3. Fixed nav dropdown items that were wrapping onto two lines.
+4. Made clicking a nav link to the page you're already on scroll down
+   to the content instead of doing nothing.
+5. Redesigned the "Is This Domestic Violence" page's abuse-types list.
+6. Redesigned the Get Help hub's topic cards and the "other assistance"
+   line for better readability.
+7. Gave the Amanda Forum section a dignified gold spotlight treatment
+   on the homepage and services page.
+8. Added tier badges to the Corporate Sponsorships cards.
+
+All changes are committed to the `main` branch and pushed to GitHub
+(https://github.com/JamesSoria/TheCaringPlaceDraft).
