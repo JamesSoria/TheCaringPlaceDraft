@@ -147,6 +147,8 @@ form.gethelp textarea{min-height:100px;resize:vertical}
 .svc-grid{display:grid;gap:48px 64px;margin-top:56px}
 @media(min-width:640px){.svc-grid{grid-template-columns:1fr 1fr}}
 @media(min-width:1000px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc-grid-2{display:grid;gap:40px 56px;margin-top:40px}
+@media(min-width:640px){.svc-grid-2{grid-template-columns:1fr 1fr}}
 .svc{display:flex;gap:16px;align-items:flex-start}
 .svc .ic{flex:none;width:34px;height:34px;display:flex;align-items:flex-start;justify-content:center;margin-top:2px}
 .svc .ic svg{stroke:var(--teal)}
