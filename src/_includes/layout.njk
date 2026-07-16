@@ -145,6 +145,18 @@ document.addEventListener('click', function(e){
   if (dest.origin !== window.location.origin) return;
   var samePage = dest.pathname === window.location.pathname && dest.search === window.location.search;
   if (samePage && dest.hash) return; // in-page anchor jump — let the browser scroll normally
+  if (samePage) {
+    // Clicking a nav link to the page you're already on: nothing would
+    // visibly happen otherwise. Scroll past the hero into the page's
+    // main content instead, so it's clear you're already in the right place.
+    e.preventDefault();
+    var main = document.getElementById('main');
+    var target = main && Array.prototype.find.call(main.children, function(el){
+      return !el.classList.contains('hero') && !el.classList.contains('pagehero');
+    });
+    (target || main).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
   e.preventDefault();
   window.location.replace(dest.href);
 });
