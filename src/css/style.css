@@ -231,6 +231,11 @@ form.gethelp textarea{min-height:100px;resize:vertical}
 .card p{font-size:16.5px;max-width:none}
 .card .role{color:var(--teal);font-weight:700;font-size:15px;margin-bottom:10px;display:block}
 
+/* ===== TIER BADGE — sponsorship level medallion ===== */
+.card.tier-card{border-top-color:var(--tier,var(--gold))}
+.tier-badge{display:block;color:var(--tier,var(--gold));margin-bottom:16px}
+.tier-badge svg{display:block}
+
 /* ===== FOOTER ===== */
 footer.site{background:var(--plum-deep);color:#EDE8F0;padding:72px 0 32px}
 footer.site h3{color:#fff;font-size:20px}
