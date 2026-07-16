@@ -23,7 +23,7 @@
 </div>
 
 {% if site.isPagesPreview %}
-<div style="background:#B8860B;color:#fff;text-align:center;font:700 14px var(--sans);padding:8px 16px">
+<div class="preview-banner">
   Design preview only — forms on this version do not submit. The live site is hosted separately.
 </div>
 {% endif %}
@@ -107,8 +107,10 @@
     </div>
     <p class="fnote">
       <span>© {{ site.year }} The Caring Place, Inc. This site sets no cookies and uses no tracking.</span>
-      <span>Internet use can never be completely erased — remember to clear your browser history. <a href="https://www.google.com" id="exitSiteLink">Exit Site</a></span>
     </p>
+  </div>
+  <div class="privacy-banner">
+    Internet use can never be completely erased — remember to clear your browser history. <a href="https://www.google.com" id="exitSiteLink">Exit Site</a>
   </div>
 </footer>
 
