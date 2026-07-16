@@ -107,19 +107,46 @@
     </div>
     <p class="fnote">
       <span>© {{ site.year }} The Caring Place, Inc. This site sets no cookies and uses no tracking.</span>
-      <span>Internet use can never be completely erased — remember to clear your browser history. <a href="https://www.google.com">Exit Site</a></span>
+      <span>Internet use can never be completely erased — remember to clear your browser history. <a href="https://www.google.com" id="exitSiteLink">Exit Site</a></span>
     </p>
   </div>
 </footer>
 
 <script>
+var SAFE_EXIT_URL = 'https://www.google.com/search?q=weather+valparaiso+in';
+
 function quickEscape(){
   try{ sessionStorage.clear(); localStorage.clear(); }catch(e){}
-  try{ window.open('https://www.google.com','_blank'); }catch(e){}
-  window.location.replace('https://www.google.com/search?q=weather+valparaiso+in');
+  window.location.replace(SAFE_EXIT_URL);
 }
 document.getElementById('escapeBtn').addEventListener('click', quickEscape);
+document.getElementById('exitSiteLink').addEventListener('click', function(e){
+  e.preventDefault();
+  quickEscape();
+});
 window.addEventListener('keydown', function(e){ if(e.key === 'Escape') quickEscape(); });
+
+// Safety: this is a multi-page site, so a normal <a> click pushes a new
+// browser-history entry per page. That means after Quick Escape, hitting
+// Back would step back through real pages of this site instead of leaving
+// it. Route in-site navigation through location.replace() instead, so the
+// site never occupies more than the single history entry the visitor
+// arrived on — Back (before or after Quick Escape) always leaves the site.
+document.addEventListener('click', function(e){
+  if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  var a = e.target.closest('a');
+  if (!a || !a.href || a.id === 'exitSiteLink') return;
+  if (a.target && a.target !== '' && a.target !== '_self') return;
+  if (a.hasAttribute('download')) return;
+  var dest;
+  try { dest = new URL(a.href, window.location.href); } catch(err) { return; }
+  if (dest.origin !== window.location.origin) return;
+  var samePage = dest.pathname === window.location.pathname && dest.search === window.location.search;
+  if (samePage && dest.hash) return; // in-page anchor jump — let the browser scroll normally
+  e.preventDefault();
+  window.location.replace(dest.href);
+});
+
 var mb = document.getElementById('menuBtn'), nav = document.getElementById('mainNav');
 mb.addEventListener('click', function(){
   var open = nav.classList.toggle('open');
