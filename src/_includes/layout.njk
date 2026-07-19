@@ -36,7 +36,8 @@
     <nav class="main" aria-label="Main">
       <ul id="mainNav">
         <li><a href="{{ '/get-help/' | url }}">Get Help Now</a>
-          <ul>
+          <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-get-help"><span class="sr-only">Show submenu for Get Help Now</span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul id="submenu-get-help">
             <li><a href="{{ '/get-help/is-this-domestic-violence/' | url }}">Is This Domestic Violence?</a></li>
             <li><a href="{{ '/get-help/how-do-i-leave/' | url }}">How Do I Leave an Abusive Relationship?</a></li>
             <li><a href="{{ '/get-help/what-happens-in-the-shelter/' | url }}">What Happens in the Shelter?</a></li>
@@ -45,7 +46,8 @@
         </li>
         <li><a href="{{ '/services/' | url }}">Our Services</a></li>
         <li><a href="{{ '/about/' | url }}">About</a>
-          <ul>
+          <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-about"><span class="sr-only">Show submenu for About</span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul id="submenu-about">
             <li><a href="{{ '/about/' | url }}">About The Caring Place</a></li>
             <li><a href="{{ '/about/leadership-board/' | url }}">Leadership &amp; Board</a></li>
             <li><a href="{{ '/survivor-stories/' | url }}">Survivor Stories</a></li>
@@ -53,7 +55,8 @@
         </li>
         <li><a href="{{ '/news-events/' | url }}">News &amp; Events</a></li>
         <li><a href="{{ '/get-involved/' | url }}">Get Involved</a>
-          <ul>
+          <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="submenu-get-involved"><span class="sr-only">Show submenu for Get Involved</span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <ul id="submenu-get-involved">
             <li><a href="{{ '/get-involved/#donate' | url }}">Donate</a></li>
             <li><a href="{{ '/get-involved/#volunteer' | url }}">Volunteer</a></li>
             <li><a href="{{ '/get-involved/#in-kind' | url }}">In-Kind Donations</a></li>
@@ -165,6 +168,32 @@ var mb = document.getElementById('menuBtn'), nav = document.getElementById('main
 mb.addEventListener('click', function(){
   var open = nav.classList.toggle('open');
   mb.setAttribute('aria-expanded', open);
+});
+
+// Desktop submenus normally open on :hover, but a top-level item like
+// "Get Help Now" is also a real link — on a touchscreen there's no hover,
+// so a first tap just navigates and the submenu is never reachable. These
+// buttons give touch (and keyboard) users an explicit way to open them.
+document.querySelectorAll('.submenu-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var submenu = document.getElementById(btn.getAttribute('aria-controls'));
+    var isOpen = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.submenu-toggle[aria-expanded="true"]').forEach(function(other){
+      if (other !== btn) {
+        other.setAttribute('aria-expanded', 'false');
+        document.getElementById(other.getAttribute('aria-controls')).classList.remove('js-open');
+      }
+    });
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    submenu.classList.toggle('js-open', !isOpen);
+  });
+});
+document.addEventListener('click', function(e){
+  if (e.target.closest('.submenu-toggle') || e.target.closest('nav.main li > ul')) return;
+  document.querySelectorAll('.submenu-toggle[aria-expanded="true"]').forEach(function(btn){
+    btn.setAttribute('aria-expanded', 'false');
+    document.getElementById(btn.getAttribute('aria-controls')).classList.remove('js-open');
+  });
 });
 </script>
 </body>
